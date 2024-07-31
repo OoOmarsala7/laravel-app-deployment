@@ -1,0 +1,5 @@
+# Ignore all dot files and directories
+.*
+
+# Except .env
+!.env
