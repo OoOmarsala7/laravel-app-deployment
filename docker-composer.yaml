@@ -23,22 +23,22 @@ services:
     networks:
       - app-network
 
-  # app:
-  #   build:
-  #     context: .
-  #     dockerfile: Dockerfile
-  #   ports:
-  #     - "8080:80"
-  #   depends_on:
-  #     - db
-  #   environment:
-  #     - DB_HOST=db
-  #     - DB_PORT=3306
-  #     - DB_DATABASE=slhf
-  #     - DB_USERNAME=root
-  #     - DB_PASSWORD=password
-  #   networks:
-  #     - app-network
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    environment:
+      - DB_HOST=db
+      - DB_PORT=3306
+      - DB_DATABASE=slhf
+      - DB_USERNAME=root
+      - DB_PASSWORD=password
+    networks:
+      - app-network
 
 networks:
   app-network:
